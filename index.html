@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Age Verifier</title>
+</head>
+<body>
+    <header>
+        <h1>Age Verifier</h1>
+    </header>
+
+    <section>
+        <form action="#">
+            <p> Ano de Nascimento:
+                <label for=""></label>
+                <input type="text">
+            </p>
+
+            <p> Sexo:   
+                <input type="radio" value="Masc" name="sex" id="imas">
+                <label for="imas">Masculino</label>
+
+                <input type="radio" value="Fem" name="sex" id="ifem">
+                <label for="ifem">Feminino</label>
+            </p>
+
+            <p><input type="submit" onclick="ageVerif()" id="enviodata"></p>
+        </form>
+
+        <div id="queme">
+            Quem é você?
+        </div>
+
+        <div id="evoce">
+            Você!
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Um Estudante Medíocre</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
