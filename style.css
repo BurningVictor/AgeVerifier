@@ -40,13 +40,17 @@ section div {
     padding: 10px;
 }
 
-form {
+div#form {
     margin: 15px;
 }
 
-form p {
+div#form p {
     padding: 10px;
-    font-weight: 250;
+    font-weight: bolder;
+}
+
+label {
+    font-weight: normal;
 }
 
 footer {
