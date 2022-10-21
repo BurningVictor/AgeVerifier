@@ -4,7 +4,8 @@ function ageVerif() {
     var anonasc = window.document.querySelector('input#enviodata')
     var idade = anoatual - Number(anonasc.value)
     var msg = window.document.querySelector('div#queme')
-    var img = window.document.querySelector('div#evoce')
+    var img = document.createElement('img')
+    img.setAttribute('id', 'foto')
     var sexo = window.document.getElementsByName('sex')
     var gen = ''
     var faixaet = ''
@@ -14,16 +15,22 @@ function ageVerif() {
     if (Number(anonasc.value) > anoatual || anonasc.value.length == 0) {
         window.alert('Verifique os dados selecionados')
     } else {
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
         if (sexo[0].checked) {
             var gen = 'homem'
             if (idade>=0 && idade<10) {
                 var faixaet = `um menino`
+                img.setAttribute('src', 'images/criança-homem.jpg')
             } else if (idade<21) {
                 var faixaet = `um ${gen} jovem`
+                img.setAttribute('src', 'images/jovem-homem.jpeg')
             } else if (idade<50) {
                 var faixaet = `um ${gen} adulto`
+                img.setAttribute('src', 'images/adulto-homem.jpeg')
             } else {
                 var faixaet = `um ${gen} idoso`
+                img.setAttribute('src', 'images/idoso-homem.jpeg')
             }
         }
 
@@ -31,17 +38,21 @@ function ageVerif() {
             var gen = 'mulher'
             if (idade>=0 && idade<10) {
                 var faixaet = `uma menina`
+                img.setAttribute('src', 'images/criança-menina.jpg')
             } else if (idade<21) {
                 var faixaet = `uma ${gen} jovem`
-            } else if (idade<50) {
+                img.setAttribute('src', 'images/jovem-menina.jpg')
+            } else if (idade<50) { 
                 var faixaet = `uma ${gen} adulta`
+                img.setAttribute('src', 'images/adulto-mulher.jpeg')
             } else {
                 var faixaet = `uma ${gen} idosa`
+                img.setAttribute('src', 'images/idoso-rita-lee.jpg')
             }
         }
+        msg.innerHTML = `Aparentemente, você é ${faixaet} de ${idade} anos.`
+        msg.appendChild(img)
     }
-
-    msg.innerHTML = `Aparentemente, você é ${faixaet} de ${idade} anos.`
 }
 
 /*
